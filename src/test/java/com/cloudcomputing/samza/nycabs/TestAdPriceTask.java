@@ -45,7 +45,7 @@ public class TestAdPriceTask {
         // Initialize TestRunner
         TestRunner
                 .of(new AdPriceTaskApplication())
-                .addInputStream(inputDescriptor, TestUtils.genStreamData("adClickTrue"))
+                .addInputStream(inputDescriptor, TestUtils.genStreamData("adClickTrue.json"))
                 .addOutputStream(outputDescriptor, 1)
                 .addConfig(confMap)
                 .addConfig("deploy.test", "true") // Ensure test mode
@@ -98,7 +98,7 @@ public class TestAdPriceTask {
         // Initialize TestRunner
         TestRunner
                 .of(new AdPriceTaskApplication())
-                .addInputStream(inputDescriptor, TestUtils.genStreamData("adClickFalse"))
+                .addInputStream(inputDescriptor, TestUtils.genStreamData("adClickFalse.json"))
                 .addOutputStream(outputDescriptor, 1)
                 .addConfig(confMap)
                 .addConfig("deploy.test", "true") // Ensure test mode
