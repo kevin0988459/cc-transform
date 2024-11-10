@@ -39,7 +39,7 @@ public class AdPriceTask implements StreamTask, InitableTask {
         objectMapper = new ObjectMapper();
 
         // Load ad prices
-        List<String> adPricesRawString = AdPriceConfig.readFile("AdPriceData.json");
+        List<String> adPricesRawString = AdPriceConfig.readFile("NYCstoreAds.json");
         for (String rawString : adPricesRawString) {
             Map<String, Object> mapResult = objectMapper.readValue(rawString, HashMap.class);
             String storeId = (String) mapResult.get("storeId");
